@@ -1,0 +1,12 @@
+* Details
+Uses MSIEXEC to uninstall either/both the REALVNC viewer and REALVNC server.
+It uses Get-CimInstance to find the product id for the application.
+The ID is fed into msiexec to uninstall the applications.
+
+* Usage
+#+begin_src shell
+$env:VNCServer=$true 
+$env:VNCViewer=$true 
+
+./script.ps1
+#+end_src
